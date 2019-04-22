@@ -1,19 +1,11 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {LayoutModule} from '@angular/cdk/layout';
-import {MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 import {NavigationComponent} from './components/navigation/navigation.component';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   declarations: [NavigationComponent],
   imports: [
-    CommonModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    SharedModule
   ],
   exports: [
     NavigationComponent
