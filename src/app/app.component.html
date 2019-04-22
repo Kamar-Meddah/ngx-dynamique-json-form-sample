@@ -2,7 +2,7 @@
 <app-navigation>
   <router-outlet></router-outlet>
 
-  <app-dynamique-form [fields]="fieldsInput | async" (submit)="submit($event)"></app-dynamique-form>
+  <app-dynamique-form [fields]="(inputData| async)?.fields" (send)="submit($event)"></app-dynamique-form>
 </app-navigation>
 
 

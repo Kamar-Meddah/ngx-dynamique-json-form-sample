@@ -1,7 +1,8 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
-import {FormBuilder} from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
 import {FormlyFieldInput} from '@ngx-formly/material/input';
 import {FormsService} from './services/forms.service';
+import {FormlyFieldConfig, FormlyFormOptions} from "@ngx-formly/core";
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import {FormsService} from './services/forms.service';
 })
 export class AppComponent implements OnInit {
   title = 'dynamique-form';
-  public fieldsInput: FormlyFieldInput;
+  public fieldsInput: {fields: FormlyFieldConfig };
 
   constructor(private readonly formBuilder: FormBuilder,
               private readonly formsService: FormsService) {
@@ -18,12 +19,11 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
-    this.fieldsInput = this.formsService.findForm();
+    this.inputData = this.formsService.findForm();
   }
 
-  public submit(event: Event){
-    let k = event;
-    console.log(event.valid)
+  public submit(event: FormGroup){
+    console.log(event);
   }
 
 }

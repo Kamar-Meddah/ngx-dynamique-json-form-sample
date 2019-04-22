@@ -7,10 +7,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {LayoutWidgetModule} from './modules/layout-widget/layout-widget.module';
-import {SharedModule} from './modules/shared/shared.module';
-import {DynamiqueFormComponent} from "./modules/form-widget/components/dynamique-form/dynamique-form.component";
-import {FormWidgetModule} from "./modules/form-widget/form-widget.module";
-import {HttpClientModule} from "@angular/common/http";
+import {FormWidgetModule} from './modules/form-widget/form-widget.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [

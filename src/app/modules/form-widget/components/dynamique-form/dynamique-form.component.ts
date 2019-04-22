@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {FormlyFieldConfig} from '@ngx-formly/core';
+import {FormlyFieldConfig, FormlyFormOptions} from '@ngx-formly/core';
 
 @Component({
   selector: 'app-dynamique-form',
@@ -8,15 +8,13 @@ import {FormlyFieldConfig} from '@ngx-formly/core';
   styleUrls: ['./dynamique-form.component.scss']
 })
 export class DynamiqueFormComponent implements OnInit {
-
   @Input() fields: FormlyFieldConfig;
-  @Output() submit: EventEmitter = new EventEmitter<FormGroup>();
+  @Output() send: EventEmitter<FormGroup> = new EventEmitter();
 
   public form: FormGroup;
 
   onSubmit() {
-    this.submit.emit(this.form);
-    this.submit.complete();
+    this.send.emit(this.form);
   }
 
   constructor(private readonly formBuilder: FormBuilder) {

@@ -7,7 +7,13 @@
         "type":"email",
         "label": "Email address",
         "placeholder": "Enter email",
-        "required": "true"
+        "required": "true",
+        "pattern": "(^[a-zA-Z0-9.]+@[a-z]{3,}.[a-z]{2,3}$)"
+      },
+      "validation": {
+        "messages": {
+          "pattern": "Invalid Email"
+        }
       }
     },{
       "key": "firstName",
@@ -16,6 +22,77 @@
         "type":"text",
         "label": "first name",
         "placeholder": "Enter your firstname",
+        "required": "true"
+      }
+    },{
+      "key": "Textarea",
+      "type": "textarea",
+      "templateOptions": {
+        "label": "Textarea",
+        "rows":"10",
+        "placeholder": "Placeholder",
+        "required": "true"
+      }
+    },{
+      "key": "color",
+      "type": "radio",
+      "templateOptions": {
+        "label": "radio",
+        "placeholder": "Placeholder",
+        "required": "true",
+        "options": [
+          {
+            "label": "No Preference",
+            "value": null
+          },
+          {
+            "label": "Green",
+            "value": "green"
+          },
+          {
+            "label": "Blue",
+            "value": "blue"
+          }
+        ]
+      }
+    },
+    {
+      "key": "reason",
+      "type": "textarea",
+      "templateOptions": {
+        "label": "Why?"
+      },
+      "expressionProperties": {
+        "templateOptions.label": "'Why did you choose ' + model.color + '?'"
+      },
+      "hideExpression": "!model.color"
+    },
+    {
+      "key": "sport",
+      "type": "select",
+      "templateOptions": {
+        "label": "Sport",
+        "options": [
+          { "id": "1", "name": "Soccer" },
+          { "id": "2", "name": "Basketball" }
+        ],
+        "valueProp": "id",
+        "labelProp": "name"
+      }
+    },{
+      "key": "date",
+      "type": "input",
+      "templateOptions": {
+        "type": "date",
+        "label": "date",
+        "valueProp": "id",
+        "labelProp": "name"
+      }
+    },{
+      "key": "date",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "checkbox",
         "required": "true"
       }
     }
