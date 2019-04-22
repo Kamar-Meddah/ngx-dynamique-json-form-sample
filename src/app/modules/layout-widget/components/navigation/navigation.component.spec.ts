@@ -10,6 +10,7 @@ import {
 } from '@angular/material';
 
 import { NavigationComponent } from './navigation.component';
+import {SharedModule} from "../../../shared/shared.module";
 
 describe('NavigationComponent', () => {
   let component: NavigationComponent;
@@ -20,12 +21,7 @@ describe('NavigationComponent', () => {
       declarations: [NavigationComponent],
       imports: [
         NoopAnimationsModule,
-        LayoutModule,
-        MatButtonModule,
-        MatIconModule,
-        MatListModule,
-        MatSidenavModule,
-        MatToolbarModule,
+        SharedModule
       ]
     }).compileComponents();
   }));

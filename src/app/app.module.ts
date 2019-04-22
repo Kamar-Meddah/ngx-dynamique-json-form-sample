@@ -8,6 +8,9 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {LayoutWidgetModule} from './modules/layout-widget/layout-widget.module';
 import {SharedModule} from './modules/shared/shared.module';
+import {DynamiqueFormComponent} from "./modules/form-widget/components/dynamique-form/dynamique-form.component";
+import {FormWidgetModule} from "./modules/form-widget/form-widget.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import {SharedModule} from './modules/shared/shared.module';
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     LayoutWidgetModule,
-    SharedModule
+    FormWidgetModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

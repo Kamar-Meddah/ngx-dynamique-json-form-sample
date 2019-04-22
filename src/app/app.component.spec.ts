@@ -1,12 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {SharedModule} from "./modules/shared/shared.module";
+import {LayoutWidgetModule} from "./modules/layout-widget/layout-widget.module";
+import {BrowserModule} from "@angular/platform-browser";
+import {AppRoutingModule} from "./app-routing.module";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        BrowserAnimationsModule,
+        RouterTestingModule,
+        LayoutWidgetModule
       ],
       declarations: [
         AppComponent
@@ -26,10 +33,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('dynamique-form');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render a navigation component tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to dynamique-form!');
+    expect(compiled.querySelector('app-navigation')).toBeTruthy();
   });
 });

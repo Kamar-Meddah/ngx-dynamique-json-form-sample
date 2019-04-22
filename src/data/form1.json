@@ -1,0 +1,23 @@
+{
+  "fields": [
+    {
+      "key": "email",
+      "type": "input",
+      "templateOptions": {
+        "type":"email",
+        "label": "Email address",
+        "placeholder": "Enter email",
+        "required": "true"
+      }
+    },{
+      "key": "firstName",
+      "type": "input",
+      "templateOptions": {
+        "type":"text",
+        "label": "first name",
+        "placeholder": "Enter your firstname",
+        "required": "true"
+      }
+    }
+  ]
+}
