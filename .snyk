@@ -52,3 +52,21 @@ patch:
         patched: '2019-07-04T04:15:30.142Z'
     - karma-coverage-istanbul-reporter > istanbul-api > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
         patched: '2019-07-04T04:15:30.142Z'
+    - snyk > lodash:
+        patched: '2019-07-14T20:08:42.265Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-14T20:08:42.265Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-14T20:08:42.265Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-14T20:08:42.265Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-14T20:08:42.265Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-14T20:08:42.265Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-14T20:08:42.265Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-14T20:08:42.265Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-14T20:08:42.265Z'
