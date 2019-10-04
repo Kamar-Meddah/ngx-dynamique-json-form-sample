@@ -70,3 +70,20 @@ patch:
         patched: '2019-07-14T20:08:42.265Z'
     - snyk > @snyk/dep-graph > graphlib > lodash:
         patched: '2019-07-14T20:08:42.265Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - protractor > browserstack > https-proxy-agent:
+        patched: '2019-10-04T04:15:33.376Z'
+    - protractor > saucelabs > https-proxy-agent:
+        patched: '2019-10-04T04:15:33.376Z'
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T04:15:33.376Z'
+    - '@angular/cli > pacote > make-fetch-happen > https-proxy-agent':
+        patched: '2019-10-04T04:15:33.376Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T04:15:33.376Z'
+    - '@angular/cli > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent':
+        patched: '2019-10-04T04:15:33.376Z'
+    - '@angular/cli > @schematics/update > pacote > make-fetch-happen > https-proxy-agent':
+        patched: '2019-10-04T04:15:33.376Z'
+    - '@angular/cli > @schematics/update > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent':
+        patched: '2019-10-04T04:15:33.376Z'
