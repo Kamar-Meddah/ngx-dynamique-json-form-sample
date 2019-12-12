@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -70,3 +70,10 @@ patch:
         patched: '2019-07-14T20:08:42.265Z'
     - snyk > @snyk/dep-graph > graphlib > lodash:
         patched: '2019-07-14T20:08:42.265Z'
+  SNYK-JS-TREEKILL-536781:
+    - '@angular-devkit/build-angular > tree-kill':
+        patched: '2019-12-12T04:15:42.302Z'
+    - '@angular-devkit/build-angular > @ngtools/webpack > tree-kill':
+        patched: '2019-12-12T04:15:42.302Z'
+    - snyk > snyk-sbt-plugin > tree-kill:
+        patched: '2019-12-12T04:15:42.302Z'
